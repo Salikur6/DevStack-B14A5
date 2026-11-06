@@ -1,7 +1,6 @@
 import { RxHamburgerMenu } from 'react-icons/rx';
 import navLogo from '../../assets/logo-text.png'
 import { useState } from 'react';
-import { DiVim } from 'react-icons/di';
 import { TbXboxXFilled } from 'react-icons/tb';
 
 const Navbar =()=>{
@@ -13,9 +12,9 @@ const handleToggle = ()=>{
 }
 
     return (
-        <div className=''>
+        <nav className='sticky top-0 bg-white'>
 
-<div className='container mx-auto flex sm:justify-between justify-around  gap-4 mt-4 items-center'>
+<div className='container mx-auto flex sm:justify-between justify-around  gap-4 pt-4 items-center '>
 
 
     <div className='hidden md:block cursor-pointer col-span-3'>
@@ -78,9 +77,9 @@ const handleToggle = ()=>{
 
 
 </div>
-<div className='divider mt-0'></div>
+<div className='divider mt-3 mb-0 h-0'></div>
 
-        </div>
+        </nav>
     )
 }
 

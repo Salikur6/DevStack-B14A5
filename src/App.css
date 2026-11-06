@@ -30,3 +30,7 @@
   -webkit-text-fill-color: transparent;
   color: transparent;
 }
+
+.bg-linear{
+   background: linear-gradient(to right, #FF5722 0%, #D81B7E 50%, #7C3AED 100%);   
+}
