@@ -3,6 +3,7 @@ import './App.css'
 import Navbar from './Components/Navbar/Navbar'
 import Banner from './Components/Banner/Banner'
 import Technologies from './Components/Technologies/Technologies'
+import Footer from './Components/Footer/Footer'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
   <Navbar></Navbar>
   <Banner></Banner>
   <Technologies></Technologies>
+  <Footer></Footer>
 
             <ToastContainer />
 
