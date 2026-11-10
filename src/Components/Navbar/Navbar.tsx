@@ -12,7 +12,7 @@ const handleToggle = ()=>{
 }
 
     return (
-        <nav className='sticky top-0 bg-white'>
+        <nav className='sticky  top-0 bg-white'>
 
 <div className='container mx-auto flex sm:justify-between justify-around  gap-4 pt-4 items-center '>
 
