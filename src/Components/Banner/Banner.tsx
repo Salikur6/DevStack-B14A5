@@ -3,7 +3,7 @@ import bannerImg from '../../assets/banner-stack.png'
 const Banner = () => {
     return (
         <section className="container mx-auto px-3 flex flex-wrap sm:flex-nowrap justify-center sm:justify-around my-25 gap-2">
-            <div className='w-full sm:w-1/2 text-center sm:text-start '>
+            <div className='w-full sm:w-1/2 text-center sm:text-start order-2 sm:order-1 '>
                 <h1 className='font-intel text-3xl sm:text-[1.9rem] md:text-[2.5rem] font-bold mb-4'>Build Your Ideal <br />
                 <span className='linear'>
                     Development Stack
@@ -13,12 +13,12 @@ compare them side by side, and put together the stack that fits your
 next project. </p>
 
 <div>
-    <button className=' text-white bg-linear btn rounded-2xl mr-3'>Explore Technologies</button>
-    <button className='btn rounded-2xl'>Learn More</button>
+    <button className=' text-white bg-linear btn rounded-2xl mr-3 mb-3'>Explore Technologies</button>
+    <button className='btn rounded-2xl mb-3'>Learn More</button>
 </div>
             </div>
 
-            <div>
+            <div className='order-1 sm:order-2'>
                 <img src={bannerImg} width={'350px'} height={'350px'}  alt="" />
             </div>
         </section>
