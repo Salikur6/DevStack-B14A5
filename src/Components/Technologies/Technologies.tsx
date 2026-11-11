@@ -2,7 +2,6 @@ import { Suspense, useState } from "react";
 import Tech from "./Tech";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import type { TechTypes } from "../TechType";
-import { DiVim } from "react-icons/di";
 import { CiSquareRemove } from "react-icons/ci";
 
 const dataPromise = async (): Promise<TechTypes[]> => {
@@ -21,7 +20,16 @@ const Technologies = () => {
 
 
 
-  console.log(stack)
+  // console.log(stack)
+
+
+  const handleStackRemove = (data:TechTypes)=>{
+console.log('removed' , data);
+
+const removedStack = stack.filter(item => item.id !== data.id);
+console.log(removedStack)
+setStack(removedStack);
+  }
 
   return (
     <div className="px-3 container mx-auto">
@@ -85,7 +93,7 @@ const Technologies = () => {
             <p className="font-jakarta text-[#94A3B8] text-[8px]">{item.category}</p>
         </div>
         </div>
-        <div className="">
+        <div onClick={()=>handleStackRemove(item)} className="">
             <CiSquareRemove className=" btn  btn-square btn-secondary border-0 text-3xl"/>
 
         </div>
