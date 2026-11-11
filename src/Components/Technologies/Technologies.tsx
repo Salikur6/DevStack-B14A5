@@ -3,6 +3,7 @@ import Tech from "./Tech";
 import LoadingSpinner from "../LoadingSpinner/LoadingSpinner";
 import type { TechTypes } from "../TechType";
 import { CiSquareRemove } from "react-icons/ci";
+import { toast } from "react-toastify";
 
 const dataPromise = async (): Promise<TechTypes[]> => {
   const res = await fetch("/data.json");
@@ -17,11 +18,7 @@ const data = dataPromise();
 const Technologies = () => {
 
   const [stack, setStack] = useState<TechTypes[]>([]);
-
-
-
   // console.log(stack)
-
 
   const handleStackRemove = (data:TechTypes)=>{
 console.log('removed' , data);
@@ -29,6 +26,13 @@ console.log('removed' , data);
 const removedStack = stack.filter(item => item.id !== data.id);
 console.log(removedStack)
 setStack(removedStack);
+
+toast.info(`${data.name} removed from you Stack`)
+  }
+
+  const handleRemoveAllStack =()=>{
+    setStack([])
+    toast.warning('All Technologies removed from you Stack')
   }
 
   return (
@@ -108,7 +112,7 @@ setStack(removedStack);
 
 
             <div className="">
-              <button className="text-[#D82C20]  font-inter font-semibold text-sm py-2 my-10 border border-[#ED8C85] rounded-lg text-center cursor-pointer w-full btn btn-ghost">
+              <button onClick={handleRemoveAllStack} className={`text-[#D82C20]  font-inter font-semibold text-sm py-2 my-10 border border-[#ED8C85] rounded-lg text-center cursor-pointer w-full btn btn-ghost ${stack.length === 0 && 'hidden'}`}>
                 Remove All
               </button>
             </div>
