@@ -7,7 +7,7 @@ const LoadingSpinner = ({
   message = "Loading technologies...",
 }: LoadingSpinnerProps) => {
   return (
-    <div className="flex min-h-87.5 w-full flex-col items-center justify-center gap-5">
+    <div className="flex min-h-87.5 w-full flex-col items-center justify-center gap-5 ">
 
       {/* Spinner */}
       <div className="relative flex h-28 w-28 items-center justify-center">
